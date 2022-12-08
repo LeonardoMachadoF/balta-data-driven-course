@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\apeju\\Desktop\\Projetos\\DataDriven\\DataDriven.csproj": {}
+    "C:\\Users\\apeju\\Desktop\\Projetos\\DataDriven\\DataDriven.csproj": {}
   },
   "projects": {
-    "c:\\Users\\apeju\\Desktop\\Projetos\\DataDriven\\DataDriven.csproj": {
+    "C:\\Users\\apeju\\Desktop\\Projetos\\DataDriven\\DataDriven.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\apeju\\Desktop\\Projetos\\DataDriven\\DataDriven.csproj",
+        "projectUniqueName": "C:\\Users\\apeju\\Desktop\\Projetos\\DataDriven\\DataDriven.csproj",
         "projectName": "DataDriven",
-        "projectPath": "c:\\Users\\apeju\\Desktop\\Projetos\\DataDriven\\DataDriven.csproj",
+        "projectPath": "C:\\Users\\apeju\\Desktop\\Projetos\\DataDriven\\DataDriven.csproj",
         "packagesPath": "C:\\Users\\apeju\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\apeju\\Desktop\\Projetos\\DataDriven\\obj\\",
+        "outputPath": "C:\\Users\\apeju\\Desktop\\Projetos\\DataDriven\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\apeju\\AppData\\Roaming\\NuGet\\NuGet.Config",

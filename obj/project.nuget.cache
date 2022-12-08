@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wjTo0y4H4OP7ldQsLYuVl4feUh0mYjRS8T8yBMxs+wNCB9jKBUgswwtIpQjOfd3mUv8Sw35Zu8WPB1c9qb6bWg==",
+  "dgSpecHash": "UPXO0zPXocSfJe1QjXOE7vuxefsDl7b4bmxL7ORSCew3QzBcqkh9MdHd9r4TRzhVEIPlyurduTH3kv/NL7C1gA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\apeju\\Desktop\\Projetos\\DataDriven\\DataDriven.csproj",
+  "projectFilePath": "C:\\Users\\apeju\\Desktop\\Projetos\\DataDriven\\DataDriven.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\apeju\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\apeju\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

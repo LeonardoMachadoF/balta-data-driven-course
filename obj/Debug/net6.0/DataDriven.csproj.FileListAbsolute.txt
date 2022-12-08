@@ -60,3 +60,4 @@ C:\Users\apeju\Desktop\Projetos\DataDriven\bin\Debug\net6.0\runtimes\win\lib\net
 C:\Users\apeju\Desktop\Projetos\DataDriven\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\apeju\Desktop\Projetos\DataDriven\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\apeju\Desktop\Projetos\DataDriven\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\apeju\Desktop\Projetos\DataDriven\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -1,5 +1,6 @@
 using DataDriven.Data;
 using DataDriven.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,6 +14,7 @@ public class CategoryController : ControllerBase
     }
 
     [HttpGet]
+    [AllowAnonymous]
     public async Task<ActionResult<List<Category>>> Get([FromQuery] int take = 3, [FromQuery] int skip = 0)
     {
         var categories = await _context.Categories.AsNoTracking().Skip(skip).Take(take).ToListAsync();
@@ -21,6 +23,7 @@ public class CategoryController : ControllerBase
 
     [HttpGet]
     [Route("{id:int}")]
+    [AllowAnonymous]
     public async Task<ActionResult<Category>> GetById(int id)
     {
         var category = await _context.Categories.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
@@ -29,6 +32,7 @@ public class CategoryController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize(Roles = "employee")]
     public async Task<ActionResult<List<Category>>> Post([FromBody] Category model)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -47,6 +51,7 @@ public class CategoryController : ControllerBase
 
     [HttpPut]
     [Route("{id:int}")]
+    [Authorize(Roles = "employee")]
     public async Task<ActionResult<List<Category>>> Put(int id, [FromBody] Category model)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -66,6 +71,7 @@ public class CategoryController : ControllerBase
 
     [HttpDelete]
     [Route("{id:int}")]
+    [Authorize(Roles = "employee")]
     public async Task<IActionResult> Delete(int id)
     {
         var category = await _context.Categories.FirstOrDefaultAsync(x => x.Id == id);

@@ -13,7 +13,7 @@ builder.Services.AddDbContext<DataContext>(opts => opts.UseSqlServer(builder.Con
 builder.Services.AddScoped<DataContext, DataContext>();
 
 builder.Services.AddControllers();
-var key = Encoding.ASCII.GetBytes(Settings.Secret);
+var key = Settings.GetKeyInBytes();
 builder.Services.AddAuthentication(x =>
 {
     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

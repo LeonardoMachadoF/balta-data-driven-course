@@ -1,5 +1,6 @@
 using DataDriven.Data;
 using DataDriven.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,7 @@ public class ProductController : ControllerBase
     }
 
     [HttpGet]
+    [AllowAnonymous]
     public async Task<ActionResult<List<Product>>> Get([FromQuery] int take = 3, [FromQuery] int skip = 0)
     {
         var products = await _context.Products.OrderByDescending(x => x.Price).Include(x => x.Category).AsNoTracking().Skip(skip).Take(take).ToListAsync();
@@ -23,6 +25,7 @@ public class ProductController : ControllerBase
 
     [HttpGet]
     [Route("{id:int}")]
+    [AllowAnonymous]
     public async Task<ActionResult<Product>> GetById(int id)
     {
         var product = await _context.Products.Include(x => x.Category).AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
@@ -32,6 +35,7 @@ public class ProductController : ControllerBase
 
     [HttpGet]
     [Route("categories/{id:int}")]
+    [AllowAnonymous]
     public async Task<ActionResult<Product>> GetByCategory(int id)
     {
         var products = await _context.Products.Include(x => x.Category).AsNoTracking().Where(x => x.CategoryId == id).ToListAsync();
@@ -40,6 +44,7 @@ public class ProductController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize(Roles = "employee")]
     public async Task<ActionResult<List<Product>>> Post([FromBody] Product model)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
